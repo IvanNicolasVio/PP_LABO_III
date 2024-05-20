@@ -131,6 +131,11 @@ input[type="button"]:hover {
     background-color: #565676;
 }
 
+#btnBorrar {
+    display: block;
+    margin: 20px auto;
+}
+
 @media only screen and (max-width: 768px) {
     form {
         width: 80%; 

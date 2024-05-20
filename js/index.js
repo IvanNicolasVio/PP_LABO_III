@@ -9,6 +9,7 @@ const btnGuardar = document.getElementById("btn");
 const btnModificar = document.getElementById("btnModificar");
 const btnEliminar = document.getElementById("btnEliminar");
 const btnCancelar = document.getElementById("btnCancelar");
+const btnBorrar = document.getElementById("btnBorrar");
 document.addEventListener("DOMContentLoaded", onInit);
 
 function onInit() {
