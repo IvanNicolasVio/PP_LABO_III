@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/normalice.css">
+    <link rel="stylesheet" href="./css/tabla.css">
+    <link rel="stylesheet" href="./css/form.css">
+    <script src="./js/index.js" type="module" defer></script>
+    <link rel="icon" href="./assets/logo.svg" type="image/x-icon">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div class="barra">
+            <a href="./index.html"><img src="./assets/logo.svg" alt="Logo principal"></a>
+            <nav>
+                <ul>
+                    <li><a href="./index.html">Administracion</a></li>
+                    <li><a href="#">Anuncio</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div>
+        <div class="img-referencia-container">
+            <img src="./assets/background.jpeg" alt="Imagen de referencia" class="img-referencia">
+        </div>
+        <h1>Administrador de Monedas</h1>
+    </div>
+
+    <form id="tabla_carga">
+        <div class="grupo-form">
+            <input id="id" hidden>
+        </div>
+
+        <div class="grupo-form">
+            <label for="nombre">NOMBRE</label>
+            <input type="text" id="nombre" placeholder="Ingrese nombre">
+        </div>
+
+        <div class="grupo-form">
+            <label for="simbolo">SIMBOLO</label>
+            <input type="text" id="simbolo" placeholder="Ingrese simbolo">
+        </div>
+
+        <div class="grupo-form">
+            <label for="precio">PRECIO ACTUAL(USD)</label>
+            <input type="text" id="precio" placeholder="Ingrese precio">
+        </div>
+
+        <div class="grupo-form">
+            <label class="tipo" for="tipo">TIPO DE CONSENSO</label>
+            <select id="tipo"></select >
+        </div>
+
+        <div class="grupo-form">
+            <label for="cantidad">CANTIDAD EN CIRCULACION</label>
+            <input type="text" id="cantidad" placeholder="Ingrese cantidad">
+        </div>
+
+        <div class="grupo-form">
+            <label class="algoritmo" for="algoritmo">ALGORITMO</label>
+            <select id="algoritmo"></select >
+        </div>
+
+        <div class="grupo-form">
+            <label for="sitio">SITIO WEB OFICIAL</label>
+            <input type="text" id="sitio" placeholder="Ingrese sitio">
+        </div>
+
+        <div>
+            <button id="btn" type="submit">Guardar</button>
+            <input id="btnModificar" type="button" value="Modificar"  hidden>
+            <input id="btnEliminar" type="button" value="Eliminar"  hidden>
+            <input id="btnCancelar" type="button" value="Cancelar"  hidden>
+        </div>
+    </form>
+
+    <table>
+        <thead id="tabla">
+            <tr id="tabla_headers">
+
+            </tr>
+        </thead>
+        <tbody id="tabla_body">
+
+        </tbody>
+    </table>
+
+    <div id="spinner-container" class="hidden">
+        <div id="spinner"></div>
+    </div>
+
+    <footer>
+        <nav>
+            <ul>
+                <li><a href="./index.html">Administracion</a></li>
+                <li><a href="./anuncio.html">Anuncio</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
+        <p>Todos los derechos reservados &copy;</p>
+    </footer>
+</body>
+</html>
