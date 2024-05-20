@@ -20,8 +20,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
-    z-index: 9999; /* Asegura que esté por encima de todo el contenido */
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: 9999; 
 }
 
 #spinner-container.hidden {
