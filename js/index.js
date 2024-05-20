@@ -136,7 +136,7 @@ function darDia(){
     const nowInBuenosAires = new Date().toLocaleString('en-US', { timeZone: timeZone });
     const dateInBuenosAires = new Date(nowInBuenosAires);
     const day = String(dateInBuenosAires.getDate()).padStart(2, '0');
-    const month = String(dateInBuenosAires.getMonth() + 1).padStart(2, '0'); // Los meses van de 0 a 11
+    const month = String(dateInBuenosAires.getMonth() + 1).padStart(2, '0'); 
     const year = dateInBuenosAires.getFullYear();
     const formattedDate = `${day}-${month}-${year}`;
     return formattedDate;
