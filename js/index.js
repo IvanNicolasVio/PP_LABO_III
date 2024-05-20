@@ -21,6 +21,7 @@ function onInit() {
         cancelar();
         modificar();
         eliminar();
+        borrarTodo();
         borrarSpinner();
     }, TIEMPO_CARGA);
     
@@ -48,6 +49,21 @@ function rellenarSelectAlg(){
     });
 }
 
+function borrarTodo(){
+    btnBorrar.addEventListener("click", async (e) => {
+        e.preventDefault();
+        if(confirm("Desea borrar TODO?")){
+            crearSpinner();
+            setTimeout(() => {
+                borrarLista(KEY_STORAGE);
+                formulario.reset();
+                crearTabla();
+                ocultarBtn(2); 
+                borrarSpinner();
+            }, TIEMPO_CARGA);  
+        }
+    })
+}
 
 function cancelar(){
     btnCancelar.addEventListener("click", async (e) => {
