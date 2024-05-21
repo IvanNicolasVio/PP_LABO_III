@@ -219,15 +219,15 @@ function crearTabla(){
     
 }
 
-function cargarFormulario(Crypto) {
-    document.getElementById("id").value = Crypto.id;
-    document.getElementById("nombre").value = Crypto.nombre;
-    document.getElementById("simbolo").value = Crypto.simbolo;
-    document.getElementById("precio").value = Crypto.precioActual;
-    document.getElementById("tipo").value = Crypto.consenso || '';
-    document.getElementById("cantidad").value = Crypto.cantCirculacion || '';
-    document.getElementById("algoritmo").value = Crypto.algoritmo || '';
-    document.getElementById("sitio").value = Crypto.sitio || '';
+function cargarFormulario(crypto) {
+    document.getElementById("id").value = crypto.id;
+    document.getElementById("nombre").value = crypto.nombre;
+    document.getElementById("simbolo").value = crypto.simbolo;
+    document.getElementById("precio").value = crypto.precioActual;
+    document.getElementById("tipo").value = crypto.consenso || '';
+    document.getElementById("cantidad").value = crypto.cantCirculacion || '';
+    document.getElementById("algoritmo").value = crypto.algoritmo || '';
+    document.getElementById("sitio").value = crypto.web || '';
     ocultarBtn(1);
 }
 
