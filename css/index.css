@@ -27,6 +27,7 @@ header {
     z-index: 1000;
 }
 
+
 header .barra {
     display: flex;
     justify-content: space-between;

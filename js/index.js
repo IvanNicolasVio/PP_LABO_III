@@ -108,11 +108,11 @@ function modificar(){
         let nuevasPropiedades = {
             nombre: nombreInput.value,
             simbolo: simboloInput.value,
-            tipo: tipoInput.value,
-            precio: precioInput.value,
-            cantidad: cantidadInput.value,
+            consenso: tipoInput.value,
+            precioActual: precioInput.value,
+            cantCirculacion: cantidadInput.value,
             algoritmo: algoritmoInput.value,
-            sitio: sitioInput.value
+            web: sitioInput.value
         };
         if(confirm("Confirma la modificacion")){
             crearSpinner();
