@@ -160,34 +160,45 @@ function crearCrypto(){
         }
         crearSpinner();
         setTimeout(() => {
-            const crypto = new Crypto(
-                obtenerNuevoID(),
-                nombreInput.value,
-                simboloInput.value,
-                darDia(),
-                precioInput.value,
-                tipoInput.value,
-                cantidadInput.value,
-                algoritmoInput.value,
-                sitioInput.value,
-            );
-            const respuesta = crypto.verify();
-            if(respuesta){
-                const items = leer(KEY_STORAGE);
-                items.push(crypto);
-                try {
-                    escribir(KEY_STORAGE,items);
-                    crearTabla();
+            if(ValidadorNumero(precioInput.value) && ValidadorNumero(cantidadInput.value)){
+                const crypto = new Crypto(
+                    obtenerNuevoID(),
+                    nombreInput.value,
+                    simboloInput.value,
+                    darDia(),
+                    precioInput.value,
+                    tipoInput.value,
+                    cantidadInput.value,
+                    algoritmoInput.value,
+                    sitioInput.value,
+                );
+                const respuesta = crypto.verify();
+                if(respuesta){
+                    const items = leer(KEY_STORAGE);
+                    items.push(crypto);
+                    try {
+                        escribir(KEY_STORAGE,items);
+                        crearTabla();
+                    }
+                    catch (error) {
+                        alert("Error!");
+                    }
                 }
-                catch (error) {
-                    alert("Error!");
-                }
+            }else{
+                alert("Error! ponga un numero");
             }
+            
             formulario.reset();
             borrarSpinner();
         }, TIEMPO_CARGA);  
     })
 }
+
+function ValidadorNumero(numero) {
+    const number = Number(numero);
+    return Number.isInteger(number) && numero.trim() !== '';
+}
+
 
 function crearTabla(){
     const tablaHeaders = document.getElementById("tabla_headers");
